@@ -1,0 +1,259 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "PPTelegraf";
+  src: url("/assets/font/PPTelegraf-Regular.otf");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PPTelegraf";
+  src: url("/assets/font/PPTelegraf-UltraBold.otf");
+  font-weight: 800;
+  font-display: swap;
+}
+
+* {
+  font-family: PPTelegraf, sans-serif;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  @apply h-1 w-1 rounded-4;
+}
+
+::-webkit-scrollbar-track {
+  @apply rounded-4;
+}
+
+input::-webkit-search-cancel-button {
+  @apply cursor-pointer ms-2;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-blueGradient rounded-4 outline-none;
+}
+
+/* ===== INPUT NUMBER SIDE ARROW NONE ===== */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  @apply !appearance-none;
+}
+
+.react-tel-input .selected-flag {
+  @apply !w-[67px];
+}
+
+.react-tel-input .flag {
+  @apply !bg-none !w-0;
+}
+
+.react-tel-input .country-list .country.highlight,
+.react-tel-input .country-list .country:hover {
+  @apply !bg-light-blue;
+}
+
+.react-tel-input .selected-flag .arrow {
+  @apply !border-none;
+}
+
+.react-tel-input .selected-flag .arrow::after {
+  @apply content-[''] absolute -top-0.5 left-[5px] w-9 h-1.5 bg-center bg-no-repeat bg-[length:20px_20px] !bg-topArrow;
+}
+
+.react-tel-input {
+  @apply !z-20;
+}
+
+.react-tel-input .flag-dropdown.open .selected-flag,
+.react-tel-input .selected-flag:hover,
+.react-tel-input .selected-flag:focus {
+  @apply !bg-transparent;
+}
+
+.react-tel-input .country-list {
+  @apply !bg-mid-blue !rounded-2.5 !w-[240px];
+}
+
+.react-tel-input .country-list .country .dial-code {
+  @apply !text-white;
+}
+
+.flip_card {
+  perspective: 1000px;
+}
+
+.flip_card_inner {
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip_card:hover .flip_card_inner {
+  transform: rotateY(180deg);
+}
+
+.flip_card_front,
+.flip_card_back {
+  backface-visibility: hidden;
+}
+
+.flip_card_back {
+  transform: rotateY(180deg);
+}
+
+.overlay_active::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+@layer utilities {
+  .blue-gradient-bg {
+    background: linear-gradient(92.91deg, #6494ee 0.95%, #085bf7 96.32%);
+  }
+
+  .hover-before_translate_y_0:hover::before,
+  .before_translate_y_0::before {
+    transform: translateY(0);
+  }
+
+  .hover-after_translate_y_100:hover::after,
+  .after_translate_y_100::after {
+    transform: translateY(-100%);
+  }
+}
+
+.popular_gradient {
+  @apply text-transparent bg-clip-text;
+  -webkit-background-clip: text;
+}
+
+#category-slider .swiper-slide {
+  @apply !min-w-[278px] !min-h-[278px];
+}
+
+.swiper-scrollbar {
+  @apply !bg-white;
+}
+
+.swiper-scrollbar-drag {
+  background: linear-gradient(
+    92.91deg,
+    #6494ee 0.95%,
+    #085bf7 96.32%
+  ) !important;
+  @apply !opacity-100;
+}
+/* 
+#team-slider .swiper-slide {
+  @apply !min-h-[278px];
+}
+
+#team-slider .swiper-slide {
+  @apply !min-h-[278px];
+}
+
+#team-slider .swiper-pagination-bullets {
+  @apply !bottom-[130px];
+}
+
+#team-slider .swiper-pagination-bullet {
+  @apply !size-[16px];
+  background: linear-gradient(92.91deg, #6494ee 0.95%, #085bf7 96.32%);
+}
+
+#team-slider .swiper-pagination-bullet-active {
+  background: linear-gradient(92.91deg, #6494ee 0.95%, #085bf7 96.32%);
+} */
+
+/* #team-slider .swiper-scrollbar {
+  background-color: unset !important;
+}
+
+#team-slider .swiper-scrollbar-drag {
+  background: unset !important;
+} */
+
+#connect_slider .swiper-slide {
+  @apply !min-w-[278px] !min-h-[375px];
+}
+
+.currency_card:hover .currency-btn {
+  @apply flex;
+}
+
+.currency_card:hover .grey-card {
+  @apply bg-steel-dark-gray !h-full;
+}
+
+#nft .grid-cols {
+  @apply !max-w-[320px];
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: white !important;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+  transition: background-color 5000s ease-in-out 0s !important;
+}
+
+.rotate_hover .inner {
+  transition: border 0.1s linear;
+}
+
+.rotate_hover::before,
+.rotate_hover::after {
+  @apply content-[unset] absolute inset-[0px] rounded-2 z-[-1] animate-glow w-full transition-all duration-500 ease-linear opacity-0 bg-blueRotate min-[1800px]:-left-[0.1px] min-[1800px]:-top-[0.1px];
+  background-size: 400%;
+}
+
+.rotate_hover:hover::before,
+.rotate_hover:hover::after {
+  @apply content-[""] opacity-100;
+}
+
+.backdrop_blur {
+  backdrop-filter: blur(30px) !important;
+  -webkit-backdrop-filter: blur(30px) !important;
+}
+.backdrop-blur-md {
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+}
+.backdrop-blur-sm {
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+}
+
+@media (max-width: 1024px) {
+  #team-slider .swiper-pagination-bullets {
+    @apply !bottom-[100px];
+  }
+}
+
+@media (max-width: 640px) {
+  #team-slider .swiper-pagination-bullets {
+    @apply !bottom-[70px];
+  }
+
+  #team-slider .swiper-pagination-bullet {
+    @apply !size-[13px];
+  }
+
+}
+
+.text_linear_gold {
+  background: linear-gradient(
+    90.52deg,
+    #ebc654 -2.17%,
+    #f9ea83 60.11%
+  ) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
