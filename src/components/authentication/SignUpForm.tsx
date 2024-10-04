@@ -112,10 +112,35 @@ const Form: React.FC = () => {
     const VALIDATE_ERR = VALIDATE_FORM();
     if (Object.keys(VALIDATE_ERR).length === 0) {
       // Save form data to local storage
+      const body = JSON.stringify({  
+        firstname: e.target[0].value.split(' ')[0],
+        lastname: e.target[0].value.split(' ')[1],
+        username: e.target[1].value,
+        email: e.target[2].value,
+        phone: e.target[3].value + e.target[4].value,
+        password: e.target[5].value
+      })
+      console.log(body)
+      const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: body
+        }
+      
+      fetch('http://localhost:5000/api/v1/auth/create', requestOptions)
+      .then(response => response.json())
+      .then((data) => {
+        if (data.success == 'yes') {
+          router.push("/sign-up/upload-profile")
+        }
+        else {
+          setErrors({username: data.error})
+        }
+    });
       localStorage.setItem("user_info", JSON.stringify(form));
-
       setForm(DEFAULT_STATE);
-      router.push("/sign-up/upload-profile");
+      ;
     } else {
       setErrors(VALIDATE_ERR);
     }
