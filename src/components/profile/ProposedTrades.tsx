@@ -6,7 +6,14 @@ import Image from "next/image";
 import PrimaryHeading from "../custom-ui/PrimaryHeading";
 import Paragraph from "../custom-ui/Paragraph";
 
-const ProposedTrades = () => {
+interface ChildComponentProps {
+  reqs: any[];  // Define the expected type for profile (array of any type)
+}
+
+const ProposedTrades: React.FC<ChildComponentProps> = ({ reqs }) => {
+  if (reqs.length == 0) {
+    return null;
+  }
   const [cards, setCards] = useState(NFT_CARDS_LIST);
 
   const REMOVE_CARD_HANDLER = (removeCardIndex: number) => {
@@ -17,7 +24,6 @@ const ProposedTrades = () => {
   };
 
   return (
-    cards.length > 0 && (
       <div className="container mx-auto mx-auto custom-2xl:max-w-[1600px] pb-6">
         <PrimaryHeading
           maxFontSize={22}
@@ -27,7 +33,7 @@ const ProposedTrades = () => {
           Proposed trades
         </PrimaryHeading>
         <div className="flex items-center overflow-auto gap-4 pb-2">
-          {cards.map((obj, index) => {
+          {reqs.map((obj, index) => {
             return (
               <div
                 className="min-w-[314px] relative rounded-5 overflow-hidden group/item"
@@ -86,7 +92,6 @@ const ProposedTrades = () => {
           })}
         </div>
       </div>
-    )
   );
 };
 

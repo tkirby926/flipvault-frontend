@@ -13,6 +13,7 @@ const page = () => {
   const [prof, setProf] = useState<any>([]);
   const [friends, setFriends] = useState<any>([]);
   const [files, setFiles] = useState<any>([]);
+  const [reqs, setReqs] = useState<any>([]);
   const [hasrendered, setHasRendered] = useState<boolean>(false);
   useEffect(() => {
     if (!hasrendered) {
@@ -35,6 +36,7 @@ const page = () => {
               detail: [{ trades: data.prof[5].toString(), live_transactions: data.prof[4].toString(), assets: "290", friends: data.prof[2].toString()}],
             }])
             setFiles(data.files);
+            setReqs(data.trade_reqs)
         });
         setHasRendered(true)
     }
@@ -44,7 +46,7 @@ const page = () => {
     <>
       <ProfileDetails profile={prof}/>
       <ConnectWalletCards />
-      <ProposedTrades />
+      <ProposedTrades reqs={reqs}/>
       <CryptoCurrencies />
       <MyNft />
       <AddFile />
