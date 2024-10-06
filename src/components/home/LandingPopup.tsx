@@ -18,8 +18,31 @@ const LandingPopup = () => {
   }, [isPopupVisible]);
   const HANDLE_SUBMIT = (e: any) => {
     e.preventDefault();
-    setIsPopupVisible(false);
-    setIsFormSubmitted("");
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(isFormSubmitted)) {
+      return;
+    }
+    const body = JSON.stringify({  
+      email: isFormSubmitted
+    })
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      credentials: 'include' as RequestCredentials,
+      body: body
+      }
+    
+    fetch('http://localhost:5000/api/v1/emails/signup', requestOptions)
+    .then(response => response.json())
+    .then((data) => {
+      if (data.error == '') {
+        setIsPopupVisible(false);
+        setIsFormSubmitted("");
+      }
+      else {
+        return;
+      }
+  });
   };
   return (
     <>

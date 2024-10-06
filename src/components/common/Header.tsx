@@ -53,6 +53,21 @@ const Header = () => {
     }
   }, []);
 
+  const HANDLE_LOGOUT = (e: React.FormEvent) => {
+    e.preventDefault()
+    const requestOptions = {
+      method: 'DELETE',
+      headers: { 'Content-Type': 'application/json' },
+      credentials: 'include' as RequestCredentials,
+    }
+    fetch('http://localhost:5000/api/v1/auth/logout', requestOptions)
+    .then(response => response.json())
+    .then((data) => {
+    });
+    localStorage.removeItem("user_info");
+    location.reload()
+  }
+
   interface HeaderLink {
     url: string;
     text: string;
@@ -170,9 +185,7 @@ const Header = () => {
                             return (
                               <Link
                                 key={i}
-                                onClick={() => {
-                                  localStorage.removeItem("user_info");
-                                }}
+                                onClick={value.title == "Log Out" ? HANDLE_LOGOUT : null}
                                 className={`flex items-center p-3 gap-3 hover:bg-white hover:bg-opacity-20 capitalize ${value.title.toLocaleLowerCase() === "log out"
                                     ? "text-hot-pink"
                                     : "text-white"

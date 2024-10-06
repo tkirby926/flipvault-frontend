@@ -6,7 +6,11 @@ import Icons from "../common/Icons";
 import Cta from "../custom-ui/Cta";
 import PopUp from "./PopUp";
 
-const ProfileDetails = () => {
+interface ChildComponentProps {
+  profile: any[];  // Define the expected type for profile (array of any type)
+}
+
+const ProfileDetails: React.FC<ChildComponentProps> = ({ profile }) => {
   const [popUpVisible, setPopUpVisible] = useState<boolean>(false);
   useEffect(() => {
     if (popUpVisible === true) {
@@ -19,7 +23,7 @@ const ProfileDetails = () => {
     <div className="container mx-auto mx-auto custom-2xl:max-w-[1600px] pt-8 pb-6">
       <div className="w-full overflow-auto xl:overflow-hidden flex items-center md:gap-6 gap-4 pb-2">
         <div className="bg-white bg-opacity-[12%] border border-black rounded-5 p-6 !pe-12 w-full lg:min-h-[159px] sm:min-w-[780px] min-w-[600px]">
-          {PROFILE_DETAIL.map((obj, index) => {
+          {profile.map((obj, index) => {
             return (
               <div key={index} className="flex items-center">
                 <div className="flex items-center gap-4">
@@ -63,10 +67,10 @@ const ProfileDetails = () => {
                       </div>
                       <div className="flex flex-col">
                         <p className="font-extrabold md:text-xl text-lg text-white leading-120">
-                          {subObj.volume}
+                          {subObj.live_transactions}
                         </p>
                         <p className="font-normal md:text-sm text-xs text-white leading-120 mt-1 text-nowrap">
-                          Volume traded
+                          Live Trans Completed
                         </p>
                       </div>
                       <div className="flex flex-col">
@@ -79,7 +83,7 @@ const ProfileDetails = () => {
                       </div>
                       <div className="flex flex-col">
                         <p className="font-extrabold md:text-xl text-lg text-white leading-120">
-                          {subObj.friend}
+                          {subObj.friends}
                         </p>
                         <p className="font-normal md:text-sm text-xs text-white leading-120 mt-1 text-nowrap">
                           Friends

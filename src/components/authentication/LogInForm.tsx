@@ -69,18 +69,22 @@ const Form: React.FC = () => {
     const VALIDATE_ERR = VALIDATE_FORM();
     if (Object.keys(VALIDATE_ERR).length === 0) {
       setForm(DEFAULT_STATE);
+      const f = e.target as HTMLFormElement
+      const user = f[0] as HTMLInputElement
+      const pass = f[1] as HTMLInputElement
       const requestOptions = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        credentials: 'include',
+        credentials: 'include' as RequestCredentials,
         body: JSON.stringify({  
-                                username: e.target[0].value,
-                                password: e.target[1].value})
+                                username: user.value,
+                                password: pass.value})
         }
     fetch('http://localhost:5000/api/v1/auth/login', requestOptions)
     .then(response => response.json())
     .then((data) => {
         if (data.correct_login) {
+          localStorage.setItem("user_info", JSON.stringify(form));
           router.push("/");
         }
         else if (data.is_user) {
@@ -90,7 +94,6 @@ const Form: React.FC = () => {
           setErrors({username: 'No active user with this username'})
         }
     });
-      localStorage.setItem("user_info", JSON.stringify(form));
       
     } else {
       setErrors(VALIDATE_ERR);

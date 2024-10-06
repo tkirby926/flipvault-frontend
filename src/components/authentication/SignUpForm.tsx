@@ -112,19 +112,26 @@ const Form: React.FC = () => {
     const VALIDATE_ERR = VALIDATE_FORM();
     if (Object.keys(VALIDATE_ERR).length === 0) {
       // Save form data to local storage
+      const f = e.target as HTMLFormElement
+      const name = f[0] as HTMLInputElement
+      const user = f[1] as HTMLInputElement
+      const email = f[2] as HTMLInputElement
+      const phone_area = f[3] as HTMLInputElement
+      const phone = f[4] as HTMLInputElement
+      const pass = f[5] as HTMLInputElement
       const body = JSON.stringify({  
-        firstname: e.target[0].value.split(' ')[0],
-        lastname: e.target[0].value.split(' ')[1],
-        username: e.target[1].value,
-        email: e.target[2].value,
-        phone: e.target[3].value + e.target[4].value,
-        password: e.target[5].value
+        firstname: name.value.split(' ')[0],
+        lastname: name.value.split(' ')[1],
+        username: user.value,
+        email: email.value,
+        phone: phone_area.value + phone.value,
+        password: pass.value
       })
       console.log(body)
       const requestOptions = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        credentials: 'include',
+        credentials: 'include' as RequestCredentials,
         body: body
         }
       
@@ -132,13 +139,13 @@ const Form: React.FC = () => {
       .then(response => response.json())
       .then((data) => {
         if (data.success == 'yes') {
+          localStorage.setItem("user_info", JSON.stringify(form));
           router.push("/sign-up/upload-profile")
         }
         else {
           setErrors({username: data.error})
         }
     });
-      localStorage.setItem("user_info", JSON.stringify(form));
       setForm(DEFAULT_STATE);
       ;
     } else {

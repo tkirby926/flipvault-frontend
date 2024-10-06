@@ -5,13 +5,19 @@ import PrimaryHeading from "../custom-ui/PrimaryHeading";
 import { useState } from "react";
 import { MY_FRIENDS } from "@/src/utils/helper";
 
-const MyFriend = () => {
+interface ChildComponentProps {
+  friends: any[];  // Define the expected type for profile (array of any type)
+}
+
+const MyFriend: React.FC<ChildComponentProps> = ({ friends }) => {
+  if (friends.length == 0) {
+    return null;
+  }
   const [cards, setCards] = useState(MY_FRIENDS);
   const REMOVE_CARD_HANDLER = (removeCardIndex: number) => {
     setCards(cards.filter((_, index) => index !== removeCardIndex));
   };
   return (
-    cards.length > 0 && (
       <div className="container mx-auto mx-auto custom-2xl:max-w-[1600px] pb-10 sm:pb-20">
         <PrimaryHeading
           maxFontSize={22}
@@ -21,7 +27,7 @@ const MyFriend = () => {
           My Friends
         </PrimaryHeading>
         <div className="overflow-auto flex flex-wrap gap-y-3 max-h-[360px] pb-2 pe-2 -mx-3">
-          {cards.map((obj, index) => {
+          {friends.map((obj, index) => {
             return (
               <div key={index} className="w-full md:w-6/12 xl:w-4/12 px-3">
                 <div
@@ -29,7 +35,10 @@ const MyFriend = () => {
                   key={index}>
                   <div className="flex items-center gap-x-4 md:gap-x-6">
                     <Image
-                      src={obj.img}
+                      src={
+                        // obj[0]
+                        ''
+                      }
                       className="rounded-full max-w-[60px] max-h-[60px] w-full object-cover min-h-[60px]"
                       alt="profile"
                       height={60}
@@ -42,10 +51,10 @@ const MyFriend = () => {
                         minFontSize={16}
                         center
                         className="text-white max-w-[800px] leading-110 !mx-0">
-                        {obj.name}
+                        {obj[1]}
                       </PrimaryHeading>
                       <p className=" font-normal text-sm sm:text-base text-white">
-                        {obj.username}
+                        {obj[2]}
                       </p>
                     </div>
                   </div>
@@ -61,7 +70,6 @@ const MyFriend = () => {
           })}
         </div>
       </div>
-    )
   );
 };
 
