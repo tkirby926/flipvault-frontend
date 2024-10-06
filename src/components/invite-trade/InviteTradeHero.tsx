@@ -10,7 +10,27 @@ const InviteTradeHero = () => {
   // INVITE TRADE POPUP CODE
   const [invitePopUpVisible, setInvitePopUpVisible] = useState<boolean>(false);
   const [inviteFriendValue, setInviteFriendValue] = useState<String>("");
+  const [tradeDetails, setTradeDetails] = useState<any>([])
+  const [hasRendered, setHasRendered] = useState<boolean>(false)
   useEffect(() => {
+    if (!hasRendered) {
+      const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include' as RequestCredentials,
+      }
+      fetch('http://localhost:5000/api/v1/trans/find_trans', requestOptions)
+      .then(response => response.json())
+      .then((data) => {
+        if (data.status != null) {
+          // TRIGGER EVENT LISTENER HERE
+        }
+        else {
+          // MAY HAVE TO DO THIS LOOKUP IN CHILD COMPONENT
+        }
+      });
+      setHasRendered(false)
+    }
     if (invitePopUpVisible === true) {
       document.body.classList.add("overflow-hidden");
     } else {
