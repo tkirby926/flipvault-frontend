@@ -26,7 +26,13 @@ const page = () => {
         .then(response => response.json())
         .then((data) => {
           if (data.status != null) {
-            window.location.assign('/')
+            setProf([{
+              name: "Not signed in",
+              username: "",
+              img: "/assets/images/profile/png/profile.png",
+              detail: [{ trades: "0", live_transactions: "0", assets: "0", friends: "0"}],
+            }])
+            setFriends(new Array());
           }
             setFriends(data.friends);
             setProf([{

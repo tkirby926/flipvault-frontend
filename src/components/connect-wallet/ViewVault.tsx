@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import VaultGiveGallery from "./GiveGallery";
 import VaultReceiveGallery from "./ReceiveGallery";
 import UserProfileDoe from "./UserProfileDoe";
@@ -9,12 +9,34 @@ import { VAULT_GIVE_DATA_LIST } from "@/src/utils/helper";
 const ViewVault = () => {
   const [showDataGive, setShowDataGive] = useState(false);
   const [showDataReceive, setShowDataReceive] = useState(false);
+  const [tradeDetails, setTradeDetails] = useState<any>([])
+  const [hasRendered, setHasRendered] = useState<boolean>(false)
   const [selectedItems, setSelectedItems] = useState<any[]>(
     VAULT_GIVE_DATA_LIST.slice(0, 3)
   );
   const [receivedItems, setReceivedItems] = useState<any[]>(
     VAULT_RECEIVE_DATA_LIST.slice(0, 5)
   );
+  useEffect(() => {
+    if (!hasRendered) {
+      const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include' as RequestCredentials,
+      }
+      fetch('http://localhost:5000/api/v1/trans/find_trans', requestOptions)
+      .then(response => response.json())
+      .then((data) => {
+        if (data.status != null) {
+          // TRIGGER EVENT LISTENER HERE
+        }
+        else {
+          // MAY HAVE TO DO THIS LOOKUP IN CHILD COMPONENT
+        }
+      });
+      setHasRendered(true)
+    }
+})
 
   const handleItemSelection = (item: any) => {
     setSelectedItems((prevSelectedItems) => {

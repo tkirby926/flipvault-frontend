@@ -8,7 +8,8 @@ import {
   THE_OASIS,
   TWITTER,
   VIEW_YOUR_VAULT,
-  YOUTUBE
+  YOUTUBE,
+  WHITE_PAGES
 } from "./constants";
 export const NAV_LINKS_LIST = [
   { text: "The Oasis", url: THE_OASIS },
@@ -16,6 +17,7 @@ export const NAV_LINKS_LIST = [
   // { text: "Connect Wallets", url: VIEW_YOUR_VAULT },
   { text: "View Your Vault", url: VIEW_YOUR_VAULT },
   { text: "Flip+", url: FLIP_PLUS },
+  { text: "White Pages", url: WHITE_PAGES },
 ];
 export const PROFILE = [
   {

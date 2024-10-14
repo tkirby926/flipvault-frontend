@@ -10,8 +10,8 @@ interface ChildComponentProps {
 }
 
 const MyFriend: React.FC<ChildComponentProps> = ({ friends }) => {
-  if (friends.length == 0) {
-    return null;
+  if (friends == undefined || friends.length == 0) {
+    return (<div></div>);
   }
   const [cards, setCards] = useState(MY_FRIENDS);
   const REMOVE_CARD_HANDLER = (removeCardIndex: number) => {

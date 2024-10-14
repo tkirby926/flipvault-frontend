@@ -13,6 +13,7 @@ export const SETTINGS = "#";
 export const CURRENCY_DETAIL = "/detail/currency";
 export const RECENTLY_DETAIL = "/detail/recently";
 export const TOP_TRADER_DETAIL = "/detail/top-trader";
+export const WHITE_PAGES = "/white-pages";
 export const CATEGORY_DETAIL = "/detail/category";
 export const MAIL = "mailto:info@flipvault.io";
 export const FACEBOOK = "https://www.facebook.com";
