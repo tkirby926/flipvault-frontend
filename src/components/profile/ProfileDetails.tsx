@@ -14,7 +14,7 @@ interface SubObj {
   trades: string;
   live_transactions: string;
   assets: string,
-  friends: []
+  friends: string
   // Add other keys based on the structure of subObj
 }
 

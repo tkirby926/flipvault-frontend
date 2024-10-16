@@ -48,7 +48,7 @@ const ProposedTrades: React.FC<ChildComponentProps> = ({ reqs }) => {
                       {obj.purposedAmount}
                     </Paragraph>
                     <div className="flex items-center gap-3 pt-5">
-                      {obj.purposedNft.map((item, i) => (
+                      {obj.purposedNft.map((item: string, i: number) => (
                         <Image
                           width={82}
                           height={82}
