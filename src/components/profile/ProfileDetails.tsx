@@ -10,6 +10,14 @@ interface ChildComponentProps {
   profile: any[];  // Define the expected type for profile (array of any type)
 }
 
+interface SubObj {
+  trades: string;
+  live_transactions: string;
+  assets: string,
+  friends: []
+  // Add other keys based on the structure of subObj
+}
+
 const ProfileDetails: React.FC<ChildComponentProps> = ({ profile }) => {
   const [popUpVisible, setPopUpVisible] = useState<boolean>(false);
   useEffect(() => {
@@ -52,7 +60,7 @@ const ProfileDetails: React.FC<ChildComponentProps> = ({ profile }) => {
                     className="h-full w-[1px] md:min-h-[100px] object-cover pointer-events-none sm:ms-8 mx-2 sm:me-9"
                   />
                 </div>
-                {obj.detail.map((subObj, i) => {
+                {obj.detail.map((subObj: SubObj, i: number) => {
                   return (
                     <div
                       className="flex items-center md:gap-8 sm:gap-6 gap-3 justify-between w-full"
