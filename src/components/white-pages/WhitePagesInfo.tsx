@@ -5,7 +5,7 @@ const WhitePageInfo = () => {
 return (
 <div>
   <p className="font-extrabold md:text-2xl text-xl text-white"> Abstract </p>
-    <p style={{"margin-bottom": "3vh"}}> As the digital economy continues to evolve, the movement toward an
+    <p className=".xl\:mb-7"> As the digital economy continues to evolve, the movement toward an
     on-chain future is gaining unprecedented momentum. Real-world assets are
     increasingly being tokenized, giving rise to an expanding array of digital
     assets &mdash;from cryptocurrencies and NFTs to tokenized real estate,
@@ -45,7 +45,7 @@ return (
   </p>
 
   <p className="font-extrabold md:text-2xl text-xl text-white"> Introduction </p>
-  <p style={{"margin-bottom": "3vh"}}>
+  <p className=".xl\:mb-7">
     1. Problem Statement The blockchain revolution has brought
     significant advancements in how assets are created, owned, and traded. The
     tokenization of real-world assets&mdash;ranging from real estate and
@@ -70,7 +70,7 @@ return (
   </p>
 
   <p className="font-extrabold md:text-2xl text-xl text-white"> 2. Purpose of the Project </p>
-  <p style={{"margin-bottom": "3vh"}}>
+  <p className=".xl\:mb-7">
     FlipVault was created to address these gaps in the
     digital asset trading landscape by providing a comprehensive platform where
     users can trade any type of tokenized asset&mdash;from NFTs and
@@ -96,7 +96,7 @@ return (
   </p>
 
   <p className="font-extrabold md:text-2xl text-xl text-white"> Market Opportunity </p>
-  <p style={{"margin-bottom": "3vh"}}>
+  <p className=".xl\:mb-7">
     The market opportunity for FlipVault is driven by the rapid
     growth of asset tokenization and the shift of real-world assets (RWAs) onto
     blockchain platforms. The global tokenization market is expected to grow from
@@ -125,7 +125,7 @@ return (
   </p>
 
   <p className="font-extrabold md:text-2xl text-xl text-white"> Solution / Technology </p>
-  <p style={{"margin-bottom": "3vh"}}>
+  <p className=".xl\:mb-7">
     FlipVault leverages cutting-edge blockchain technology
     to create a fully decentralized, cross-chain platform that supports trading of
     all digital assets across various ecosystems. The platform is designed to be
@@ -143,7 +143,7 @@ return (
   </p>
 
   <p className="font-extrabold md:text-2xl text-xl text-white"> Cross-Chain Compatibility </p>
-  <p style={{"margin-bottom": "3vh"}}>
+  <p className=".xl\:mb-7">
     At its core, FlipVault enables cross-chain
     interoperability, crucial for offering a unified trading experience across
     multiple blockchain networks. By bridging EVM-compatible chains like Polygon,
@@ -160,7 +160,7 @@ return (
   </p>
 
   <p className="font-extrabold md:text-2xl text-xl text-white"> Decentralization and Security </p>
-  <p style={{"margin-bottom": "3vh"}}>
+  <p className=".xl\:mb-7">
     Security and decentralization are integral to
     FlipVault&rsquo;s design. The platform is fully decentralized, meaning there
     is no central authority overseeing transactions. Instead, FlipVault utilizes
@@ -188,7 +188,7 @@ return (
 
   <p className="font-extrabold md:text-2xl text-xl text-white"> Use Cases </p>
   <p className="font-extrabold md:text-1xl text-xl text-white"> 1. Tokenized Real Estate </p>
-  <p style={{"margin-bottom": "3vh"}}>
+  <p className=".xl\:mb-7">
     Trading One of the most promising
     applications of blockchain technology is the tokenization of real-world
     assets, particularly real estate. With FlipVault, users can seamlessly trade
@@ -204,7 +204,7 @@ return (
   </p>
 
   <p className="font-extrabold md:text-1xl text-xl text-white"> 2. NFT and Digital Asset Swaps </p>
-  <p style={{"margin-bottom": "3vh"}}>
+  <p className=".xl\:mb-7">
     As the popularity of non-fungible tokens (NFTs)
     continues to grow, the demand for a more dynamic and interactive trading
     experience has increased. FlipVault enables users to swap NFTs across multiple
@@ -219,7 +219,7 @@ return (
   </p>
 
   <p className="font-extrabold md:text-1xl text-xl text-white"> 3. Tokenized Intellectual Property (IP) </p>
-  <p style={{"margin-bottom": "3vh"}}>
+  <p className=".xl\:mb-7">
     Trading FlipVault opens new doors for
     the trading of tokenized intellectual property (IP), such as patents, digital
     rights, and other creative works. Users can tokenize their IP on a blockchain
@@ -231,7 +231,7 @@ return (
     creative rights for digital real estate or other digital assets.
   </p>
   <p className="font-extrabold md:text-1xl text-xl text-white"> 4. Cross-Chain Cryptocurrency Swaps </p>
-  <p style={{"margin-bottom": "3vh"}}>
+  <p className=".xl\:mb-7">
     With the rise of multi-chain ecosystems,
     traders often need to move assets across different blockchains. FlipVault
     facilitates cross-chain cryptocurrency swaps, enabling users to trade assets
@@ -244,7 +244,7 @@ return (
   </p>
 
   <p className="font-extrabold md:text-1xl text-xl text-white"> 5. Trading Digital Files for Tokens </p>
-  <p style={{"margin-bottom": "3vh"}}>
+  <p className=".xl\:mb-7">
     A unique feature of FlipVault is the
     ability to trade digital files (e.g., front-end code, back-end code, digital
     artwork) for other digital assets like cryptocurrencies, NFTs, or tokenized
@@ -255,7 +255,7 @@ return (
     NFTs, facilitating more flexible and creative compensation arrangements.
   </p>
   <p className="font-extrabold md:text-1xl text-xl text-white"> 6.Tokenized Asset Bartering </p>
-  <p style={{"margin-bottom": "3vh"}}>
+  <p className=".xl\:mb-7">
     FlipVault&rsquo;s flexible trading system allows
     users to barter tokenized assets in ways that traditional trading platforms
     don&rsquo;t support. For example, users could exchange a mix of tokenized real
@@ -268,7 +268,7 @@ return (
   </p>
 
   <p className="font-extrabold md:text-2xl text-xl text-white"> Roadmap </p>
-  <p style={{"margin-bottom": "3vh"}}>
+  <p className=".xl\:mb-7">
     FlipVault&rsquo;s development and growth will be rolled out in several
     phases, each designed to expand the platform&rsquo;s capabilities and user
     base, while integrating advanced features like AI-powered analysis tools and a
@@ -276,7 +276,7 @@ return (
   </p>
 
   <p className="font-extrabold md:text-1xl text-xl text-white"> Phase 1: </p>
-  <p style={{"margin-bottom": "3vh"}}>
+  <p className=".xl\:mb-7">
     Foundation Setup Backend &amp; Smart Contract Development: Develop
     the core backend infrastructure and smart contracts that will power the
     decentralized asset trading system. These smart contracts will facilitate
@@ -290,7 +290,7 @@ return (
   </p>
 
   <p className="font-extrabold md:text-1xl text-xl text-white"> Phase 2: </p>
-  <p style={{"margin-bottom": "3vh"}}>
+  <p className=".xl\:mb-7">
     User Engagement and Community Building Social Media &amp; Initial
     Marketing Campaigns: Establish a presence on key social media platforms, using
     targeted campaigns to build community awareness and attract early users.
@@ -302,7 +302,7 @@ return (
   </p>
 
   <p className="font-extrabold md:text-1xl text-xl text-white"> Phase 3: </p>
-  <p style={{"margin-bottom": "3vh"}}>
+  <p className=".xl\:mb-7">
     Early Adoption and BETA Launch NFT Creation for Early Users: Design
     and distribute NFTs for the initial users of the platform, providing them with
     incentives to continue using and promoting FlipVault. CTO Onboarding &amp;
@@ -314,7 +314,7 @@ return (
   </p>
 
   <p className="font-extrabold md:text-1xl text-xl text-white"> Phase 4: </p>
-  <p style={{"margin-bottom": "3vh"}}>
+  <p className=".xl\:mb-7">
     Partnerships and Growth File Patent for Key Technologies: Secure
     intellectual property by filing a patent for FlipVault&rsquo;s unique
     cross-chain trading system and user engagement features. Partnership
@@ -326,7 +326,7 @@ return (
     social engagement tools.
   </p>
   <p className="font-extrabold md:text-1xl text-xl text-white"> Phase 5: </p>
-  <p style={{"margin-bottom": "3vh"}}>
+  <p className=".xl\:mb-7">
     Advanced Features and AI Integration AI Live Analysis Tools for
     Trades: Integrate AI-powered analysis tools into the live trading feature,
     providing users with real-time insights into whether they are getting
@@ -338,7 +338,7 @@ return (
     including automated trading strategies or data analysis.
   </p>
   <p className="font-extrabold md:text-1xl text-xl text-white">  Phase 6: </p>
-  <p style={{"margin-bottom": "3vh"}}>
+  <p className=".xl\:mb-7">
     Token Launch and Platform Decentralization Native Token Launch:
     Launch FlipVault&rsquo;s native token, which will be used for fees associated
     with trades on the platform. The token will also play a key role in supporting
@@ -350,7 +350,7 @@ return (
   </p>
 
   <p className="font-extrabold md:text-2xl text-xl text-white"> Team </p>
-  <p style={{"margin-bottom": "3vh"}}>
+  <p className=".xl\:mb-7">
     The FlipVault team comprises experienced blockchain entrepreneurs and
     investors who have collectively made significant contributions to the crypto
     space. All three founders have been heavily involved in various crypto
@@ -362,7 +362,7 @@ return (
     digital assets are traded.
   </p>
   <p className="font-extrabold md:text-1xl text-xl text-white">  Marc Ryan &ndash; Co-Founder &amp; CEO </p>
-  <p style={{"margin-bottom": "3vh"}}>
+  <p className=".xl\:mb-7">
      Marc Ryan is a seasoned investor in
     multiple crypto verticals, including DeFi, DePIN, and cross-chain solutions.
     He has played an integral role in investing in projects that bridge the gap
@@ -390,7 +390,7 @@ return (
   </p>
 
   <p className="font-extrabold md:text-1xl text-xl text-white">  Brett Ryan &ndash; Co-Founder &amp; CSO / COO</p>
-  <p style={{"margin-bottom": "3vh"}}>
+  <p className=".xl\:mb-7">
      Brett Ryan has been at the
     forefront of crypto innovation, particularly in layer 2 scaling solutions,
     DeFi, and cross-chain technologies. Brett&rsquo;s investments and involvement
@@ -417,7 +417,7 @@ return (
   </p>
 
   <p className="font-extrabold md:text-1xl text-xl text-white">  Christian Loop &ndash; Co-Founder &amp; CFO </p>
-  <p style={{"margin-bottom": "3vh"}}>
+  <p className=".xl\:mb-7">
     Christian Loop has made strategic
     investments across several crypto verticals, with a particular focus on DePIN,
     DeFi, and NFTs. His experience in the DePIN space has involved supporting
@@ -445,7 +445,7 @@ return (
 
   <p className="font-extrabold md:text-2xl text-xl text-white"> Regulatory and Legal </p>
   <p className="font-extrabold md:text-1xl text-xl text-white">  Considerations </p>
-  <p style={{"margin-bottom": "3vh"}}>
+  <p className=".xl\:mb-7">
     As FlipVault operates in the growing
     digital asset and blockchain sector, careful attention to regulatory and legal
     frameworks is crucial to ensuring compliance and mitigating risks. Operating
@@ -455,7 +455,7 @@ return (
     environments. Below are key regulatory considerations for FlipVault:
   </p>
   <p className="font-extrabold md:text-1xl text-xl text-white">  1. U.S. Regulatory Compliance </p>
-  <p style={{"margin-bottom": "3vh"}}>
+  <p className=".xl\:mb-7">
     FlipVault is incorporated in Delaware, a
     jurisdiction known for its business-friendly legal environment, but it must
     still comply with broader U.S. federal regulations, particularly those
@@ -483,7 +483,7 @@ return (
   </p>
 
   <p className="font-extrabold md:text-1xl text-xl text-white">  2. Cross-Border Transactions and International Jurisdictions </p>
-  <p style={{"margin-bottom": "3vh"}}>
+  <p className=".xl\:mb-7">
     As FlipVault
     facilitates cross-chain trading across various blockchain ecosystems, its user
     base is likely to be global. This introduces cross-border regulatory
@@ -504,7 +504,7 @@ return (
   </p>
 
   <p className="font-extrabold md:text-1xl text-xl text-white">  3. Taxation Considerations </p>
-  <p style={{"margin-bottom": "3vh"}}>
+  <p className=".xl\:mb-7">
      The taxation of digital assets in the U.S. is
     regulated by the Internal Revenue Service (IRS), which treats cryptocurrencies
     as property for tax purposes. This means that any trades, swaps, or exchanges
@@ -517,7 +517,7 @@ return (
   </p>
 
   <p className="font-extrabold md:text-1xl text-xl text-white">  4. Decentralization and Legal Accountability </p>
-  <p style={{"margin-bottom": "3vh"}}>
+  <p className=".xl\:mb-7">
      One of FlipVault&rsquo;s key
     features is its decentralized architecture, which eliminates the need for
     intermediaries in transactions. While this offers benefits in terms of user
@@ -531,7 +531,7 @@ return (
   </p>
 
   <p className="font-extrabold md:text-1xl text-xl text-white">  5. Intellectual Property and Tokenized Assets </p>
-  <p style={{"margin-bottom": "3vh"}}>
+  <p className=".xl\:mb-7">
      The trading of tokenized
     intellectual property (IP) and digital files presents additional legal
     challenges. Ensuring that tokenized IP rights are properly assigned and
@@ -541,7 +541,7 @@ return (
   </p>
 
   <p className="font-extrabold md:text-1xl text-xl text-white">  6. Future Regulatory Developments </p>
-  <p style={{"margin-bottom": "3vh"}}>
+  <p className=".xl\:mb-7">
      Blockchain technology and tokenized assets
     are still in their early stages, and regulations continue to evolve. FlipVault
     will need to remain adaptable and proactive in monitoring regulatory changes,
@@ -552,7 +552,7 @@ return (
   </p>
 
   <p className="font-extrabold md:text-2xl text-xl text-white"> Risk Factors </p>
-  <p style={{"margin-bottom": "3vh"}}>
+  <p className=".xl\:mb-7">
     While FlipVault offers significant potential as a decentralized
     platform for trading tokenized assets, it operates in an emerging market with
     inherent uncertainties. Below are key risk factors that could impact the
@@ -560,7 +560,7 @@ return (
   </p>
 
   <p className="font-extrabold md:text-1xl text-xl text-white">  1. Slower Than Expected Adoption of On-Chain Assets </p>
-  <p style={{"margin-bottom": "3vh"}}>
+  <p className=".xl\:mb-7">
     One of the primary
     assumptions underlying FlipVault&rsquo;s business model is that the world will
     continue moving on-chain, with more real-world assets becoming tokenized and
@@ -578,7 +578,7 @@ return (
   </p>
 
   <p className="font-extrabold md:text-1xl text-xl text-white">  2. Regulatory Uncertainty  </p>
-  <p style={{"margin-bottom": "3vh"}}>
+  <p className=".xl\:mb-7">
     Blockchain and cryptocurrency regulations are still
     evolving, and there is significant uncertainty around how different
     jurisdictions will regulate tokenized assets and decentralized platforms.
@@ -593,7 +593,7 @@ return (
   </p>
 
   <p className="font-extrabold md:text-1xl text-xl text-white">  3. Security Risks and Smart Contract Vulnerabilities </p>
-  <p style={{"margin-bottom": "3vh"}}>
+  <p className=".xl\:mb-7">
      As a decentralized
     platform, FlipVault relies heavily on smart contracts to facilitate secure,
     automated trading. However, smart contracts are not immune to security
@@ -608,7 +608,7 @@ return (
   </p>
 
   <p className="font-extrabold md:text-1xl text-xl text-white">  4. Competition in the Decentralized Trading Market </p>
-  <p style={{"margin-bottom": "3vh"}}>
+  <p className=".xl\:mb-7">
      The decentralized trading
     and asset exchange space is becoming increasingly competitive, with several
     established platforms like OpenSea, Uniswap, and MagicEden dominating specific
@@ -623,7 +623,7 @@ return (
   </p>
 
   <p className="font-extrabold md:text-1xl text-xl text-white">  5. Volatility in Cryptocurrency and Digital Asset Markets </p>
-  <p style={{"margin-bottom": "3vh"}}>
+  <p className=".xl\:mb-7">
     The value of
     tokenized assets such as cryptocurrencies and NFTs can be highly volatile,
     driven by speculative trading, regulatory announcements, and market sentiment.
@@ -633,7 +633,7 @@ return (
   </p>
 
   <p className="font-extrabold md:text-1xl text-xl text-white">  Mitigation:  </p>
-  <p style={{"margin-bottom": "3vh"}}>
+  <p className=".xl\:mb-7">
     FlipVault&rsquo;s AI live analysis tool, which provides real-time
     insights into trades, helps users make more informed decisions, potentially
     reducing the risks associated with volatility. Additionally, FlipVault&rsquo;s
@@ -642,7 +642,7 @@ return (
   </p>
 
   <p className="font-extrabold md:text-1xl text-xl text-white">  6. Technical Challenges with Cross-Chain Compatibility  </p>
-  <p style={{"margin-bottom": "3vh"}}>
+  <p className=".xl\:mb-7">
     FlipVault&rsquo;s
     cross-chain functionality, which enables trading across EVM-compatible chains
     and Solana, is one of its core features. However, bridging between different
@@ -657,7 +657,7 @@ return (
   </p>
 
   <p className="font-extrabold md:text-1xl text-xl text-white">  7. Legal Liabilities in Decentralized Ecosystems  </p>
-  <p style={{"margin-bottom": "3vh"}}>
+  <p className=".xl\:mb-7">
     Operating a decentralized
     platform means there is no central authority managing trades, and users retain
     full control of their assets. While this aligns with the ethos of
@@ -671,7 +671,7 @@ return (
   </p>
 
   <p className="font-extrabold md:text-2xl text-xl text-white"> Conclusion </p>
-  <p style={{"margin-bottom": "3vh"}}>
+  <p className=".xl\:mb-7">
     As the world increasingly shifts on-chain and digital assets
     continue to gain prominence, FlipVault stands at the forefront of this
     transformation. By providing a decentralized, cross-chain platform where users
@@ -700,7 +700,7 @@ return (
   </p>
 
   <p className="font-extrabold md:text-2xl text-xl text-white"> References </p>
-  <p style={{"margin-bottom": "3vh"}}>
+  <p className=".xl\:mb-7">
     McKinsey &amp; Company, Tokenized Financial Assets: Moving from
     Pilot to Scale, May 2024. Retrieved from: McKinsey Report This report explores
     the growing adoption of tokenized assets in finance, including tokenized bonds
@@ -719,7 +719,7 @@ return (
 
   <p className="font-extrabold md:text-2xl text-xl text-white"> Appendices </p>
   <p className="font-extrabold md:text-1xl text-xl text-white">  Appendix A: </p>
-  <p style={{"margin-bottom": "3vh"}}>
+  <p className=".xl\:mb-7">
      Tokenization Growth Statistics The global tokenization
     market is expected to grow from $2.25 billion in 2022 to $13.53 billion by
     2030, with a CAGR of 24.09%&#8203; (Grand View Research). Over $10 billion
@@ -731,7 +731,7 @@ return (
   </p>
 
   <p className="font-extrabold md:text-1xl text-xl text-white">  Appendix B:  </p>
-  <p style={{"margin-bottom": "3vh"}}>
+  <p className=".xl\:mb-7">
     FlipVault Roadmap Timeline Phase 1: Backend and smart contract
     development, incorporation, and database setup. Phase 2: Community building
     via social media, frontend refinement, and whitepaper creation. Phase 3: Beta
