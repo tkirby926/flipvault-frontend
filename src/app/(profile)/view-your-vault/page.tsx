@@ -6,7 +6,7 @@ import ProfileDetails from "@/src/components/profile/ProfileDetails";
 import ProposedTrades from "@/src/components/profile/ProposedTrades";
 import AddFile from "@/src/components/profile/AddFile";
 import MyFriend from "@/src/components/profile/MyFriend";
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 
 
 const page = () => {
@@ -49,7 +49,7 @@ const page = () => {
   });
   
   return (
-    <>
+    <Suspense fallback={<div>Loading...</div>}>
       <ProfileDetails profile={prof}/>
       <ConnectWalletCards />
       <ProposedTrades reqs={reqs}/>
@@ -57,7 +57,7 @@ const page = () => {
       <MyNft />
       <AddFile />
       <MyFriend friends={friends}/>
-    </>
+    </Suspense>
   );
 };
 
