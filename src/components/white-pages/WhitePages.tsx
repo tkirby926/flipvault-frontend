@@ -57,25 +57,13 @@ const WhitePages = () => {
                 spaceBetween: 16,
               },
             }}>
-            {TABS_CARDS_DATA[selectedTab].map((obj, index) => (
               <div className="container mx-auto mx-auto custom-2xl:max-w-[1600px] pt-8 pb-6">
-                  <div className="flex justify-center p-4 lg:p-[30px] bg-off-gray bg-opacity-10 rounded-7.5 w-full" style={{'color': 'white'}}>
-                    {WhitePageInfo()}
-                  </div>
-                  <div className="flip_card_back w-full h-full absolute rounded-5 bg-off-black">
-                    <div className="px-4 opacity-0 group-hover:opacity-100 common-transition absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full">
-                      <Paragraph
-                        maxFontSize={16}
-                        minFontSize={12}
-                        reduceBelow={1200}
-                        center
-                        className="text-white text-opacity-60 pt-2">
-                        {obj.description}
-                      </Paragraph>
-                    </div>
+                  <div className="w-full overflow-auto xl:overflow-hidden flex items-center md:gap-6 gap-4 pb-2">
+                        <div className="flex justify-center p-4 lg:p-[30px] bg-off-gray bg-opacity-10 rounded-7.5 w-full" style={{'color': 'white'}}>
+                            {WhitePageInfo()}
+                        </div>
                   </div>
               </div>
-            ))}
           </Swiper>
         </div>
       </div>

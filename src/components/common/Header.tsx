@@ -53,6 +53,10 @@ const Header = () => {
     }
   }, []);
 
+  const RUN_NOTHING = (e: React.FormEvent) => {
+    e.preventDefault()
+  }
+
   const HANDLE_LOGOUT = (e: React.FormEvent) => {
     e.preventDefault()
     const requestOptions = {
@@ -185,7 +189,7 @@ const Header = () => {
                             return (
                               <Link
                                 key={i}
-                                onClick={value.title == "Log Out" ? HANDLE_LOGOUT : null}
+                                onClick={value.title == "Log Out" ? HANDLE_LOGOUT : RUN_NOTHING}
                                 className={`flex items-center p-3 gap-3 hover:bg-white hover:bg-opacity-20 capitalize ${value.title.toLocaleLowerCase() === "log out"
                                     ? "text-hot-pink"
                                     : "text-white"
