@@ -1,10 +1,5 @@
 "use client";
-import { PROFILE_DETAIL } from "@/src/utils/helper";
-import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import Icons from "../common/Icons";
-import Cta from "../custom-ui/Cta";
-import PopUp from "./PopUp";
 
 const WhitePageInfo = () => { 
 return (
