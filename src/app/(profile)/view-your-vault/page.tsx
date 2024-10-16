@@ -1,4 +1,4 @@
-// "use client";
+"use client";
 import CryptoCurrencies from "@/src/components/profile/CryptoCurrencies";
 import MyNft from "@/src/components/profile/MyNft";
 import ConnectWalletCards from "@/src/components/profile/ConnectWalletCards";

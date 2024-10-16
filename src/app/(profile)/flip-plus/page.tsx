@@ -1,3 +1,4 @@
+"use client"
 import FlipCards from "@/src/components/flip-plus/FlipCards";
 import FlipPlus from "@/src/components/flip-plus/FlipPlus";
 import Image from "next/image";

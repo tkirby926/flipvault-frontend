@@ -1,3 +1,4 @@
+"use client"
 import Connect from "@/src/components/trade/Connect";
 import Currency from "@/src/components/trade/Currency";
 import PopularItems from "@/src/components/trade/PopularItems";

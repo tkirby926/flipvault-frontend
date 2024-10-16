@@ -1,3 +1,4 @@
+"use client"
 import Detail from "@/src/components/detail/Detail";
 import Header from "@/src/components/common/Header";
 import React from "react";

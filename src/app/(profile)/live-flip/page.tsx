@@ -1,3 +1,4 @@
+"use client"
 import ViewVault from "@/src/components/connect-wallet/ViewVault";
 
 const page = () => {
